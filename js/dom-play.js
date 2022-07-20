@@ -1,13 +1,24 @@
 //alert("Hi There!");
 
-/*
-let actors = document.querySelectorAll(".professor");
+function myAlert(){
+    alert("I'm clicked!");
+}
 
-console.log(actors);
-*/
+let spans = document.querySelectorAll("#play span");
+
+console.log(spans);
+
+for(const mySpan of spans){
+    mySpan.addEventListener("click",myAlert);
+}
 
 
 function highlight(el){
-    el.style.backgroundColor='lightseagreen';
+
+    if(el.style.backgroundColor == 'lightseagreen'){      
+        el.style.backgroundColor='white';
+    }else{      
+        el.style.backgroundColor='lightseagreen';
+    }
 }
 
